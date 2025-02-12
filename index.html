@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Webseite</title>
+    <title>3D-Modell & YouTube Videos</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        iframe { width: 80%; height: 400px; margin: 20px; }
+        canvas { display: block; margin: auto; }
+    </style>
 </head>
 <body>
-    <h1>Willkommen auf meiner GitHub Page!</h1>
-    <p>Diese Seite ist mit GitHub Pages gehostet.</p>
+
+    <h1>Meine GitHub Pages Webseite</h1>
+
+    <h2>Mein YouTube Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
+            title="YouTube Video" frameborder="0" allowfullscreen></iframe>
+
+    <h2>Mein 3D-Modell</h2>
+    <div id="3d-container" style="width: 100%; height: 500px;"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // 3D-Szene erstellen
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth * 0.8, window.innerHeight * 0.6);
+        document.getElementById("3d-container").appendChild(renderer.domElement);
+
+        // Ein rotierendes 3D-Würfel-Modell erstellen
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        camera.position.z = 3;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+
 </body>
 </html>
