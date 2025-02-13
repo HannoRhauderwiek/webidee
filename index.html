@@ -1,40 +1,207 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Modell in AR anzeigen</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-            margin: 0;
-        }
-        model-viewer {
-            width: 100%;
-            max-width: 600px;
-            height: 500px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fusion Tutorial</title>
+
+  <!-- Einbindung der Schriftart (Beispiel: Montserrat) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Einbindung des Model-Viewer-Skripts -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    /* Grundlegendes Seitenlayout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    body {
+      background-color: #0D1B2A; /* Dunkles Blau als Grundfarbe */
+      color: #FFFFFF;            /* Weißer Text */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    
+    /* Container für begrenzte Blockbreite */
+    .container {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    header {
+      position: relative;
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-top: 60px; /* Platz für das Logo */
+    }
+    
+    /* Logo oben links */
+    .logo {
+      position: fixed;
+      top: 20px;
+      left: 10px; /* Hier kannst du den Wert weiter nach links oder rechts anpassen */
+      width: 80px;
+      z-index: 1000;
+      text-align: center;
+    }
+    
+    .logo img {
+      height: 100px; /* Logo-Größe anpassen */
+    }
+    
+    /* Der kleine Text unter dem Logo */
+    .logo-label {
+      color: #FF9F1C; /* Orange, wie im Footer */
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 4px;
+      margin-left: 8px; /* Kleiner Abstand nach rechts */
+    }
+    
+    /* Überschrift größer gemacht */
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #E0E1DD; /* etwas helleres Weiß/Beige */
+      margin-bottom: 0.5rem;
+    }
+    
+    header p {
+      font-size: 1rem;
+      color: #A9BCD0; /* leicht abgesetztes, kühles Grau */
+    }
+    
+    /* 3D-Modell-Bereich */
+    .model-container {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    
+    model-viewer {
+      width: 100%;
+      height: 500px;
+      background-color: transparent;
+    }
+    
+    /* Playlist Section */
+    .playlist-section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .playlist-section h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .playlist-section p {
+      font-size: 1rem;
+      color: #A9BCD0;
+      margin-bottom: 1rem;
+    }
+    
+    /* Abstand um das Video */
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 3rem 0;
+    }
+    
+    .video-container iframe {
+      max-width: 100%;
+      height: 500px;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    footer a {
+      color: #FF9F1C; /* Orange als Akzentfarbe */
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 1rem;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Buttons (falls benötigt) */
+    .btn {
+      background-color: #FF9F1C;
+      color: #ffffff;
+      padding: 0.75rem 1.25rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1rem 0;
+      transition: background-color 0.3s;
+    }
+    
+    .btn:hover {
+      background-color: #f0870d;
+    }
+  </style>
 </head>
 <body>
-
-    <!-- 3D-Modell mit AR -->
-    <model-viewer 
-        src="untitled.glb" 
-        ios-src="Baugruppe_V3 v4.usdz" 
-        alt="3D-Modell eines Astronauten"
-        auto-rotate 
-        camera-controls 
-        ar>
-    </model-viewer>
-
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <p class="logo-label">MINT:Factory</p>
+      </div>
+      <div class="header-text">
+        <h1>Fusion Tutorial</h1>
+        <p>Lerne Fusion von Grund auf – ideal für Schüler, Studenten, Unternehmen und Hobby-Maker! Diese Playlist führt dich Schritt für Schritt durch die wichtigsten CAD-Grundlagen und hilft dir, eigene 3D-Modelle für Konstruktion, Produktdesign und Fertigung zu erstellen.</p>
+      </div>
+    </header>
+    
+    <!-- Container für das 3D-Modell -->
+    <div class="model-container">
+      <model-viewer
+        src="Druckluftmotor.glb"
+        ios-src="Druckluftmotor v1.usdz"
+        alt="3D-Modell in AR"
+        ar
+        ar-modes="scene-viewer quick-look webxr"
+        camera-controls
+        auto-rotate
+        exposure="0.5"
+        style="background-color: transparent;">
+      </model-viewer>
+    </div>
+    
+    <!-- Neue Playlist Section -->
+    <section class="playlist-section">
+      <h2>Fusion Grundlagen – Druckluftmotor Schritt für Schritt</h2>
+      <p>Lerne die grundlegenden und fortgeschrittenen Funktionen von Fusion 360 anhand eines praxisnahen Projekts: dem Druckluftmotor! In 15 Videos zeige ich dir alles von den ersten Skizzen bis zur fertigen Baugruppe. Perfekt für Anfänger und Fortgeschrittene!</p>
+      <div class="video-container">
+        <iframe width="700" height="700" src="https://www.youtube.com/embed/videoseries?si=FG7pmQFw6VmNEzjD&amp;list=PLHkiagiejhUTddHtVmF54L0gOuzNB6-QH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+    
+    <!-- Footer mit weiteren Links -->
+    <footer>
+      <p>Weiterführende Ressourcen:</p>
+      <a href="https://www.autodesk.de/products/fusion-360/overview" target="_blank">Autodesk Fusion</a>
+      <a href="https://www.youtube.com/@mintfactory" target="_blank">Folge uns!!!</a>
+    </footer>
+  </div>
 </body>
 </html>
