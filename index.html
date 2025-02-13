@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D-Modell & YouTube Videos</title>
-    <style>
-        body { text-align: center; font-family: Arial, sans-serif; }
-        iframe { width: 80%; height: 400px; margin: 20px; }
-        canvas { display: block; margin: auto; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fusion CAD Tutorial</title>
+
+  <!-- Link to your external CSS file -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <h1>Meine GitHub Pages Webseite</h1>
+  <!-- Header Section with Logo -->
+  <header>
+    <div class="logo-container">
+      <!-- Replace src with your actual logo path -->
+      <img src="assets/logo.png" alt="Großes Logo" class="logo"/>
+    </div>
+    <h1 class="site-title">Fusion CAD Tutorials</h1>
+  </header>
 
-    <h2>Mein YouTube Video</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
-            title="YouTube Video" frameborder="0" allowfullscreen></iframe>
+  <!-- Main Content -->
+  <main>
+    <section class="intro">
+      <h2>Willkommen zu meinen CAD Tutorials</h2>
+      <p>
+        In dieser Serie lernst du Schritt für Schritt die Grundlagen von Autodesk Fusion kennen.
+        Wir beginnen mit einfachen Skizzen und arbeiten uns zu komplexeren 3D-Modellen vor.
+      </p>
+    </section>
 
-    <h2>Mein 3D-Modell</h2>
-    <div id="3d-container" style="width: 100%; height: 500px;"></div>
+    <!-- Video 1 -->
+    <section class="video-section">
+      <h3>Fusion Tutorial #1: Erste Konstruktion erstellen</h3>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ECXa-xsD2yk?si=yHmPPj96T3rm6pmm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p class="video-description">
+        Willkommen zum ersten Teil unserer Fusion Tutorial-Reihe auf Deutsch! In diesem Video lernst du die Grundlagen der CAD-Konstruktion und modellierst die Grundplatte unseres Druckluftmotors. Wir starten mit einer Skizze, extrudieren sie zu einem 3D-Modell und fügen Bohrungen & Abrundungen hinzu. Perfekt für Einsteiger! 
+      </p>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script>
-        // 3D-Szene erstellen
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth * 0.8, window.innerHeight * 0.6);
-        document.getElementById("3d-container").appendChild(renderer.domElement);
+    <!-- Video 2 -->
+    <section class="video-section">
+      <h3>Fusion Tutorial #2: Zylinderkopfplatte konstruieren</h3>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EMAnY2wKqHw?si=IKfuPhgnDlTgEyCC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p class="video-description">
+        Willkommen zum zweiten Teil unserer Fusion Tutorial-Reihe! In diesem Video lernst du, wie du eine Zylinderkopfplatte erstellst, Senkbohrungen anlegst und neue Funktionen wie die Wiederverwendung von Skizzen und die Bohrungsanordnung effizient nutzt. Zudem erfährst du, wie du mehrere Fasen in einem Schritt erstellst und das Material auf Aluminium änderst, um Gewicht, Volumen und Schwerpunkt zu analysieren
+      </p>
+    </section>
 
-        // Ein rotierendes 3D-Würfel-Modell erstellen
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
+    <!-- Video 3 -->
+    <section class="video-section">
+      <h3>Fusion Tutorial #3: Methoden für rotationssymmetrische Bauteile!</h3>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/z4FDjjYue7E?si=hxT7tk7z_Rc-bqyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p class="video-description">
+        In diesem Video zeige ich dir drei Methoden, um ein rotationssymmetrisches Bauteil in Fusion zu erstellen: Extrusion, Drehung und das Zylinder-Werkzeug. Du lernst, wann welche Technik sinnvoll ist und wie du effizient konstruierst. Perfekt für Einsteiger und Fortgeschrittene! Schau rein und optimiere deine CAD-Skills!
+        <iframe src="https://bbsosbrinkstr3.autodesk360.com/g/shares/SH30dd5QT870c25f12fcfa1cacff97e11763" width="800" height="500" frameborder="0" allowfullscreen></iframe> 
+      </p>
+    </section>
+  </main>
 
-        camera.position.z = 3;
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Dein Name. Alle Rechte vorbehalten.</p>
+  </footer>
 
-        function animate() {
-            requestAnimationFrame(animate);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        }
-        animate();
-    </script>
-
+  <!-- Link to your external JS file -->
+  <script src="script.js"></script>
 </body>
 </html>
