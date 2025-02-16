@@ -201,30 +201,35 @@
     
     /* Media Query für mobile Geräte */
 @media (max-width: 768px) {
-  /* Inhalte werden untereinander angeordnet */
+  /* Den Container weiter nach unten verschieben, damit fixe Elemente (z. B. Logo) ihn nicht überdecken */
+  .container {
+    margin-top: 120px; /* Wert ggf. anpassen */
+  }
+  /* Inhalte (obere Section und Video-Container) werden untereinander gestapelt */
   .content-section,
   .video-container {
-    flex-direction: column !important;
+    flex-direction: column;
     gap: 1rem;
   }
-  /* Spalten in der oberen Section auf volle Breite setzen */
+  /* In der oberen Section sollen beide Spalten die volle Breite einnehmen */
   .content-section .model-column,
   .content-section .text-column {
     flex: 0 0 100%;
+  }
+  /* Das 3D-Modell anpassen, damit es richtig skaliert und sichtbar ist */
+  .model-column model-viewer {
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
   }
   /* Link-Container: geringerer horizontaler Abstand */
   .link-container {
     gap: 2rem;
   }
-  /* headerDescription: Top-Versatz in Mobile verringern */
+  /* headerDescription: Versatz anpassen, damit keine Überlappung erfolgt */
   p[data-i18n="headerDescription"] {
     top: 0;
     margin-top: 1rem;
-  }
-  /* Für das 3D-Modell in der oberen Section: angepasste Höhe und volle Breite für mobile Darstellung */
-  .model-column model-viewer {
-    height: 300px;
-    width: 100%;
   }
 }
   </style>
