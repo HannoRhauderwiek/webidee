@@ -193,7 +193,7 @@
       text-decoration: underline;
     }
 
-    /* Verschiebung des headerDescription-Textes */
+    /* Verschiebung des headerDescription-Textes (Desktop) */
     p[data-i18n="headerDescription"] {
       position: relative;
       top: 100px;
@@ -201,15 +201,24 @@
     
     /* Media Query für mobile Geräte */
     @media (max-width: 768px) {
-      /* Bei kleinen Bildschirmen: Inhalt untereinander */
+      /* Inhalte werden untereinander angeordnet */
       .content-section,
       .video-container {
         flex-direction: column;
         gap: 1rem;
       }
-      /* Link-Container-Anpassung: Geringerer horizontaler Abstand */
+      /* Link-Container: geringerer horizontaler Abstand */
       .link-container {
         gap: 2rem;
+      }
+      /* headerDescription: Top-Versatz in Mobile verringern, damit keine Überlappung auftritt */
+      p[data-i18n="headerDescription"] {
+        top: 0;
+        margin-top: 1rem;
+      }
+      /* Für das 3D-Modell in der oberen Section: angepasste Höhe für mobile Darstellung */
+      .model-column model-viewer {
+        height: 300px;
       }
     }
   </style>
@@ -631,9 +640,9 @@
       <div class="video-container">
         <div class="model-column">
           <model-viewer
-            src="Befestigungsbügel.glb"
-            ios-src="Befestigungsbügel v1.usdz"
-            alt="Befestigungsbügel"
+            src="Befestigungsbuegel.glb"
+            ios-src="Befestigungsbuegel v1.usdz"
+            alt="Befestigungsbuegel"
             ar
             ar-modes="scene-viewer quick-look webxr"
             camera-controls
