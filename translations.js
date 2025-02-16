@@ -90,21 +90,21 @@ const translations = {
       twelfthLinkTechnicalDrawing: "Technische Zeichnung",
       twelfthLink3DModel: "3D Modell-Datei",
       
-      // 13. Playlist-Sektion
+      // 13. Playlist-Sektion – Kein 3D-Modell, Video in voller Breite
       thirteenthPlaylistTitle: "#13: Druckluftmotor animieren: Bewegungsstudie & Fehlerprüfung",
       thirteenthPlaylistDescription: "In diesem deutschsprachigen Tutorial lernst du, wie du deinen Druckluftmotor in Fusion zum Leben erweckst! Wir zeigen dir, wie du mit Kollisionsprüfungen, Schnittansichten und Messungen deine Konstruktion überprüfst. Außerdem führen wir eine Bewegungsstudie durch, um den Motor realistisch zu animieren.",
       thirteenthYoutubeLink: "https://www.youtube.com/embed/TI6x2CvxhyA?si=EPKJX7JXQoPyzr-Y",
       thirteenthLinkTechnicalDrawing: "Technische Zeichnung",
       thirteenthLink3DModel: "3D Modell-Datei",
       
-      // 14. Playlist-Sektion
+      // 14. Playlist-Sektion – Kein 3D-Modell, Video in voller Breite
       fourteenthPlaylistTitle: "#14: Explosionsdarstellung & Montagevideo",
       fourteenthPlaylistDescription: "In diesem deutschsprachigen Tutorial zeigen wir dir, wie du in Fusion professionelle Explosionsdarstellungen und Montagevideos erstellst! 🚀 Lerne, wie du Bauteile animierst, Bewegungen optimierst und deine Konstruktionen perfekt in Szene setzt.",
       fourteenthYoutubeLink: "https://www.youtube.com/embed/fgK2_0YvxDM?si=vz5mEpX62i8Bt9tj",
       fourteenthLinkTechnicalDrawing: "Technische Zeichnung",
       fourteenthLink3DModel: "3D Modell-Datei",
       
-      // 15. Playlist-Sektion
+      // 15. Playlist-Sektion – Kein 3D-Modell, Video in voller Breite
       fifteenthPlaylistTitle: "#15: Technische Zeichnungen erstellen – Manuell & Automatisch!",
       fifteenthPlaylistDescription: "In diesem Video zeigen wir dir, wie du technische Zeichnungen in Fusion manuell erstellst und automatisch generierst. Du lernst, Einzelteil- und Baugruppenzeichnungen professionell zu dokumentieren, Bemaßungen hinzuzufügen und ISO-konforme Zeichnungen zu exportieren.",
       fifteenthYoutubeLink: "https://www.youtube.com/embed/YOUR_FIFTEENTH_VIDEO",
@@ -229,7 +229,7 @@ const translations = {
       
       secondPlaylistTitle: "Fusion Grundlagen – Zweites Proyecto",
       secondPlaylistDescription: "Aquí descubrirás otro proyecto emocionante de Fusion. En este video se muestra otro modelo 3D y se explican funciones adicionales.",
-      secondYoutubeLink: "https://www.youtube.com/embed/DEIN_ZWEITES_VIDEO", // URL anpassen
+      secondYoutubeLink: "https://www.youtube.com/embed/DEIN_ZWEITES_VIDEO",
       secondLinkTechnicalDrawing: "Dibujo técnico (2)",
       secondLink3DModel: "Modelo 3D (2)",
       
@@ -420,7 +420,7 @@ const translations = {
   function setLanguage(lang) {
     // Fallback auf Englisch, falls die Sprache nicht definiert ist
     if (!translations[lang]) lang = 'en';
-    
+  
     // Alle Elemente mit data-i18n aktualisieren
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(el => {
@@ -429,7 +429,7 @@ const translations = {
         el.textContent = translations[lang][key];
       }
     });
-    
+  
     // Array mit den Schlüsseln für die YouTube-Links in den 15 Playern
     const playerKeys = [
       'youtubeLink',
@@ -448,12 +448,13 @@ const translations = {
       'fourteenthYoutubeLink',
       'fifteenthYoutubeLink'
     ];
-    
+  
     // Alle YouTube-Player (IDs: youtubePlayer1 bis youtubePlayer15) aktualisieren
     for (let i = 0; i < playerKeys.length; i++) {
       const player = document.getElementById('youtubePlayer' + (i + 1));
       if (player && translations[lang][playerKeys[i]]) {
-        player.src = translations[lang][playerKeys[i]];
+        // Statt direkt das src-Attribut zu setzen, wird die URL in data-src abgelegt
+        player.dataset.src = translations[lang][playerKeys[i]];
       }
     }
   }
