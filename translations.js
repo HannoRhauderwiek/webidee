@@ -7,105 +7,105 @@ const translations = {
       headerDescription: "Lerne Fusion von Grund auf – ideal für Schüler, Studenten, Unternehmen und Hobby-Maker! Diese Playlist führt dich Schritt für Schritt durch die wichtigsten CAD-Grundlagen und hilft dir, eigene 3D-Modelle für Konstruktion, Produktdesign und Fertigung zu erstellen.",
       
       // 1. Playlist-Sektion
-      playlistTitle: "Fusion Tutorial #1: Erste Konstruktion erstellen",
+      playlistTitle: "#1: Erste Konstruktion erstellen",
       playlistDescription: "In diesem Video lernst du die Grundlagen der CAD-Konstruktion und modellierst die Grundplatte unseres Druckluftmotors. Wir starten mit einer Skizze, extrudieren sie zu einem 3D-Modell und fügen Bohrungen & Abrundungen hinzu. Perfekt für Einsteiger!",
       youtubeLink: "https://www.youtube.com/embed/ECXa-xsD2yk?si=8524m77tR7mrl-eA",
       linkTechnicalDrawing: "Technische Zeichnung",
       link3DModel: "3D Modell-Datei",
       
       // 2. Playlist-Sektion
-      secondPlaylistTitle: "Fusion Tutorial #2: Zylinderkopfplatte konstruieren",
+      secondPlaylistTitle: "#2: Zylinderkopfplatte konstruieren",
       secondPlaylistDescription: "In diesem Video lernst du, wie du eine Zylinderkopfplatte erstellst, Senkbohrungen anlegst und neue Funktionen wie die Wiederverwendung von Skizzen und die Bohrungsanordnung effizient nutzt. Zudem erfährst du, wie du mehrere Fasen in einem Schritt erstellst und das Material auf Aluminium änderst, um Gewicht, Volumen und Schwerpunkt zu analysieren.",
       secondYoutubeLink: "https://www.youtube.com/embed/EMAnY2wKqHw?si=RfceIbcxBCRzDjb9",
       secondLinkTechnicalDrawing: "Technische Zeichnung (2)",
       secondLink3DModel: "3D Modell-Datei",
       
       // 3. Playlist-Sektion
-      thirdPlaylistTitle: "Fusion Tutorial #3: Methoden für rotationssymmetrische Bauteile!",
+      thirdPlaylistTitle: "#3: Methoden für rotationssymmetrische Bauteile!",
       thirdPlaylistDescription: "In diesem Video zeige ich dir drei Methoden, um ein rotationssymmetrisches Bauteil in Fusion zu erstellen: Extrusion, Drehung und das Zylinder-Werkzeug. Du lernst, wann welche Technik sinnvoll ist und wie du effizient konstruierst. Perfekt für Einsteiger und Fortgeschrittene!",
       thirdYoutubeLink: "https://www.youtube.com/embed/z4FDjjYue7E?si=J0z4T2JEUNVQtf0i",
       thirdLinkTechnicalDrawing: "Technische Zeichnung",
       thirdLink3DModel: "3D Modell-Datei",
       
       // 4. Playlist-Sektion
-      fourthPlaylistTitle: "Fusion Tutorial #4: Skizzenabhängigkeiten meistern!",
+      fourthPlaylistTitle: "#4: Skizzenabhängigkeiten meistern!",
       fourthPlaylistDescription: "In diesem Fusion Tutorial lernst du, wie du ein Bild in eine Skizze importierst, es korrekt skalierst und als Vorlage zum Nachzeichnen verwendest. Wir erklären die wichtigsten Skizzenabhängigkeiten und zeigen, wie du eine vollständig bestimmte Skizze für den Kurbelzapfen erstellst.",
       fourthYoutubeLink: "https://www.youtube.com/embed/simrpkVozPs?si=-Pwa9eZ8oCbWTvqQ",
       fourthLinkTechnicalDrawing: "Technische Zeichnung",
       fourthLink3DModel: "3D Modell-Datei",
       
       // 5. Playlist-Sektion
-      fifthPlaylistTitle: "Fusion Tutorial #5: Pleuel konstruieren, Zwei Methoden im Vergleich!",
+      fifthPlaylistTitle: "#5: Pleuel konstruieren, Zwei Methoden im Vergleich!",
       fifthPlaylistDescription: "In diesem Video lernst du, wie du ein Pleuel auf zwei verschiedene Arten erstellst! Zuerst nutzen wir klassische Skizzen- und Extrusionsfunktionen, dann entdecken wir eine effizientere Methode mit Spiegelungen. Dabei zeigen wir dir, wie du Kreisbögen direkt mit dem Linien-Werkzeug zeichnest, symmetrische Konturen optimierst und den Konstruktionsverlauf flexibel anpasst.",
       fifthYoutubeLink: "https://www.youtube.com/embed/jNs3bvQHuMw?si=0U1ieB9Ijn6EeZlk",
       fifthLinkTechnicalDrawing: "Technische Zeichnung",
       fifthLink3DModel: "3D Modell-Datei",
       
       // 6. Playlist-Sektion
-      sixthPlaylistTitle: "Fusion Tutorial #6: Schwungscheibe modellieren & bohren",
+      sixthPlaylistTitle: "#6: Schwungscheibe modellieren & bohren",
       sixthPlaylistDescription: "In diesem Fusion Tutorial lernst du, wie du eine Schwungscheibe modellierst, Durchgangslöcher per Extrusion ausschneidest und die runde Anordnung verwendest. Wir zeigen dir Schritt für Schritt, wie du Skizzen erstellst, Bemaßungen setzt und effiziente Konstruktionsmethoden anwendest.",
       sixthYoutubeLink: "https://www.youtube.com/embed/XFTpP7dPXKA?si=yn0T2trMON0dgReE",
       sixthLinkTechnicalDrawing: "Technische Zeichnung",
       sixthLink3DModel: "3D Modell-Datei",
       
       // 7. Playlist-Sektion
-      seventhPlaylistTitle: "Fusion Tutorial #7: 3 Wege zur perfekten Bohrung",
+      seventhPlaylistTitle: "#7: 3 Wege zur perfekten Bohrung",
       seventhPlaylistDescription: "In diesem Fusion Tutorial zeigen wir dir drei verschiedene Methoden, um eine Durchgangsbohrung in einen Kolben zu integrieren. Du lernst, wie du eine Tangentialebene erstellst, die Skizzenfunktion mit Schnittansicht nutzt und den Bohrungsbefehl effektiv einsetzt.",
       seventhYoutubeLink: "https://www.youtube.com/embed/lXbOMamVxoU?si=3MTFdwFCE-lMkRrZ",
       seventhLinkTechnicalDrawing: "Technische Zeichnung",
       seventhLink3DModel: "3D Modell-Datei",
       
       // 8. Playlist-Sektion
-      eighthPlaylistTitle: "Fusion Tutorial #8: Perfekte Kurbel erstellen!",
+      eighthPlaylistTitle: "#8: Perfekte Kurbel erstellen!",
       eighthPlaylistDescription: "In diesem deutschsprachigen Fusion Tutorial zeigen wir dir, wie du eine präzise Kurbel für deinen Druckluftmotor entwirfst. Vom Skizzieren über das Stutzen von Geometrien bis zur Extrusion – du lernst alle wichtigen Schritte für eine professionelle Konstruktion.",
       eighthYoutubeLink: "https://www.youtube.com/embed/UimsuGGbCh0?si=mxr0BbV1tCknnvhp",
       eighthLinkTechnicalDrawing: "Technische Zeichnung",
       eighthLink3DModel: "3D Modell-Datei",
       
       // 9. Playlist-Sektion
-      ninthPlaylistTitle: "Fusion Tutorial #9: Motorblock konstruieren & optimieren",
+      ninthPlaylistTitle: "#9: Motorblock konstruieren & optimieren",
       ninthPlaylistDescription: "In diesem Video dreht sich alles um den Motorblock unseres Druckluftmotors! Wir zeigen dir, wie du systematisch vorgehst, um eine saubere und übersichtliche Konstruktion zu erstellen. Du lernst, Skizzen sinnvoll zu benennen, Gruppen zu erstellen und Halbschnitte zur Kontrolle einzusetzen. Außerdem erfährst du, wie du Bohrungen, Gewinde und Belüftungselemente effizient erstellst.",
       ninthYoutubeLink: "https://www.youtube.com/embed/BL_WkTAaTs8?si=ijScWk6IXI1lMzyK",
       ninthLinkTechnicalDrawing: "Technische Zeichnung",
       ninthLink3DModel: "3D Modell-Datei",
       
       // 10. Playlist-Sektion
-      tenthPlaylistTitle: "Fusion Tutorial #10: Versatz & Extrusion einfach erklärt!",
+      tenthPlaylistTitle: "#10: Versatz & Extrusion einfach erklärt!",
       tenthPlaylistDescription: "In diesem Video konstruieren wir gemeinsam die Kurbelwelle eines Druckluftmotors und fokussieren uns auf Ausfräsungen mit Versatzebene & Extrusion. Du lernst, wie du Geometrien projizierst, Skizzen erstellst und präzise Materialabtragungen durchführst.",
       tenthYoutubeLink: "https://www.youtube.com/embed/I6EYWy1AlAg?si=-f1wipB1fzDGsXyu",
       tenthLinkTechnicalDrawing: "Technische Zeichnung",
       tenthLink3DModel: "3D Modell-Datei",
       
       // 11. Playlist-Sektion
-      eleventhPlaylistTitle: "Fusion Tutorial #11: Blechbiegeteile erstellen – 2 Methoden einfach erklärt!",
+      eleventhPlaylistTitle: "#11: Blechbiegeteile erstellen – 2 Methoden einfach erklärt!",
       eleventhPlaylistDescription: "In diesem Video lernst du zwei Methoden, um ein Blechbiegeteil zu konstruieren. Wir zeigen dir, wie du eine Abwicklung generierst, eine DXF-Datei exportierst und die Blechregeln optimal anpasst.",
       eleventhYoutubeLink: "https://www.youtube.com/embed/ogj6ni8QT3g?si=T63qc3aLAtrc4KT3",
       eleventhLinkTechnicalDrawing: "Technische Zeichnung",
       eleventhLink3DModel: "3D Modell-Datei",
       
       // 12. Playlist-Sektion
-      twelfthPlaylistTitle: "Fusion Tutorial #12: Druckluftmotor zusammenbauen – Schritt für Schritt!",
+      twelfthPlaylistTitle: "#12: Druckluftmotor zusammenbauen – Schritt für Schritt!",
       twelfthPlaylistDescription: "Heute setzen wir alle Bauteile unseres Druckluftmotors zusammen und verbinden sie präzise mit Gelenkverbindungen in Fusion. Von der Grundplatte bis zur Kurbelwelle – du lernst alle wichtigen Schritte, um eine funktionsfähige Baugruppe zu erstellen.",
       twelfthYoutubeLink: "https://www.youtube.com/embed/pYCy-rEzWuw?si=Yp8GrMtaB_BRJ0Xk",
       twelfthLinkTechnicalDrawing: "Technische Zeichnung",
       twelfthLink3DModel: "3D Modell-Datei",
       
       // 13. Playlist-Sektion
-      thirteenthPlaylistTitle: "Fusion Tutorial #13: Druckluftmotor animieren: Bewegungsstudie & Fehlerprüfung",
+      thirteenthPlaylistTitle: "#13: Druckluftmotor animieren: Bewegungsstudie & Fehlerprüfung",
       thirteenthPlaylistDescription: "In diesem deutschsprachigen Tutorial lernst du, wie du deinen Druckluftmotor in Fusion zum Leben erweckst! Wir zeigen dir, wie du mit Kollisionsprüfungen, Schnittansichten und Messungen deine Konstruktion überprüfst. Außerdem führen wir eine Bewegungsstudie durch, um den Motor realistisch zu animieren.",
       thirteenthYoutubeLink: "https://www.youtube.com/embed/TI6x2CvxhyA?si=EPKJX7JXQoPyzr-Y",
       thirteenthLinkTechnicalDrawing: "Technische Zeichnung",
       thirteenthLink3DModel: "3D Modell-Datei",
       
       // 14. Playlist-Sektion
-      fourteenthPlaylistTitle: "Fusion Tutorial #14: Explosionsdarstellung & Montagevideo",
+      fourteenthPlaylistTitle: "#14: Explosionsdarstellung & Montagevideo",
       fourteenthPlaylistDescription: "In diesem deutschsprachigen Tutorial zeigen wir dir, wie du in Fusion professionelle Explosionsdarstellungen und Montagevideos erstellst! 🚀 Lerne, wie du Bauteile animierst, Bewegungen optimierst und deine Konstruktionen perfekt in Szene setzt.",
       fourteenthYoutubeLink: "https://www.youtube.com/embed/fgK2_0YvxDM?si=vz5mEpX62i8Bt9tj",
       fourteenthLinkTechnicalDrawing: "Technische Zeichnung",
       fourteenthLink3DModel: "3D Modell-Datei",
       
       // 15. Playlist-Sektion
-      fifteenthPlaylistTitle: "Fusion Tutorial #15: Technische Zeichnungen erstellen – Manuell & Automatisch!",
+      fifteenthPlaylistTitle: "#15: Technische Zeichnungen erstellen – Manuell & Automatisch!",
       fifteenthPlaylistDescription: "In diesem Video zeigen wir dir, wie du technische Zeichnungen in Fusion manuell erstellst und automatisch generierst. Du lernst, Einzelteil- und Baugruppenzeichnungen professionell zu dokumentieren, Bemaßungen hinzuzufügen und ISO-konforme Zeichnungen zu exportieren.",
       fifteenthYoutubeLink: "https://www.youtube.com/embed/YOUR_FIFTEENTH_VIDEO",
       fifteenthLinkTechnicalDrawing: "Technische Zeichnung",
