@@ -207,6 +207,11 @@
         flex-direction: column;
         gap: 1rem;
       }
+      /* Spalten in der oberen Section auf volle Breite setzen */
+      .content-section .model-column,
+      .content-section .text-column {
+        flex: 0 0 100%;
+      }
       /* Link-Container: geringerer horizontaler Abstand */
       .link-container {
         gap: 2rem;
@@ -216,9 +221,10 @@
         top: 0;
         margin-top: 1rem;
       }
-      /* Für das 3D-Modell in der oberen Section: angepasste Höhe für mobile Darstellung */
+      /* Für das 3D-Modell in der oberen Section: angepasste Höhe und volle Breite für mobile Darstellung */
       .model-column model-viewer {
         height: 300px;
+        width: 100%;
       }
     }
   </style>
