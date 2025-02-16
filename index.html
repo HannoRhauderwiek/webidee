@@ -200,38 +200,46 @@
     }
     
     /* Media Query für mobile Geräte */
-@media (max-width: 768px) {
-  /* Den Container weiter nach unten verschieben, damit fixe Elemente (z. B. Logo) ihn nicht überdecken */
-  .container {
-    margin-top: 120px; /* Wert ggf. anpassen */
-  }
-  /* Inhalte (obere Section und Video-Container) werden untereinander gestapelt */
-  .content-section,
-  .video-container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  /* In der oberen Section sollen beide Spalten die volle Breite einnehmen */
-  .content-section .model-column,
-  .content-section .text-column {
-    flex: 0 0 100%;
-  }
-  /* Das 3D-Modell anpassen, damit es richtig skaliert und sichtbar ist */
-  .model-column model-viewer {
-    height: 300px;
-    width: 100%;
-    object-fit: contain;
-  }
-  /* Link-Container: geringerer horizontaler Abstand */
-  .link-container {
-    gap: 2rem;
-  }
-  /* headerDescription: Versatz anpassen, damit keine Überlappung erfolgt */
-  p[data-i18n="headerDescription"] {
-    top: 0;
-    margin-top: 1rem;
-  }
-}
+    @media (max-width: 768px) {
+        /* Container weiter nach unten schieben, damit fixierte Elemente (z. B. Logo) den Inhalt nicht überdecken */
+        .container {
+          margin-top: 120px;
+        }
+        /* Obere Section: Spalten werden untereinander angeordnet */
+        .content-section {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        /* Modell- und Text-Spalte als Block-Elemente und volle Breite */
+        .content-section .model-column,
+        .content-section .text-column {
+          display: block;
+          width: 100%;
+        }
+        /* Das model-viewer-Element explizit sichtbar machen */
+        .model-column model-viewer {
+          display: block;
+          width: 100%;
+          min-height: 300px;
+          height: 300px;
+          object-fit: contain;
+          
+        }
+        /* Video-Container untereinander anordnen */
+        .video-container {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        /* Link-Container: geringerer horizontaler Abstand */
+        .link-container {
+          gap: 2rem;
+        }
+        /* headerDescription: Versatz anpassen */
+        p[data-i18n="headerDescription"] {
+          top: 0;
+          margin-top: 1rem;
+        }
+      }
   </style>
 
   <script>
