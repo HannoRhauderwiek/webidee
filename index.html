@@ -89,7 +89,7 @@
       color: #A9BCD0;
     }
 
-    /* Zweispaltiges Layout */
+    /* Zweispaltiges Layout (oben) */
     .content-section {
       display: flex;
       flex-wrap: wrap;
@@ -149,6 +149,7 @@
       gap: 2rem;
       margin: 3rem 0;
     }
+    /* Standardmäßig erhalten beide Spalten jeweils flex: 1 */
     .video-container > .model-column,
     .video-container > .video-column {
       flex: 1;
@@ -164,7 +165,7 @@
     .link-container {
       display: flex;
       justify-content: center;
-      gap: 15rem;  /* Passe diesen Wert an, um den horizontalen Abstand zwischen den Links zu ändern */
+      gap: 15rem;
       margin-top: 0rem;
       margin-bottom: 5rem;
     }
@@ -196,6 +197,20 @@
     p[data-i18n="headerDescription"] {
       position: relative;
       top: 100px;
+    }
+    
+    /* Media Query für mobile Geräte */
+    @media (max-width: 768px) {
+      /* Bei kleinen Bildschirmen: Inhalt untereinander */
+      .content-section,
+      .video-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      /* Link-Container-Anpassung: Geringerer horizontaler Abstand */
+      .link-container {
+        gap: 2rem;
+      }
     }
   </style>
 
@@ -581,9 +596,9 @@
       <div class="video-container">
         <div class="model-column">
           <model-viewer
-            src="Model10.glb"
-            ios-src="Model10.usdz"
-            alt="3D-Modell: Model 10"
+            src="Kurbelwelle.glb"
+            ios-src="Kurbelwelle v1.usdz"
+            alt="Kurbelwelle"
             ar
             ar-modes="scene-viewer quick-look webxr"
             camera-controls
@@ -604,7 +619,7 @@
         </div>
       </div>
       <div class="link-container">
-         <a href="TECHNICAL_DRAWING_URL_10" class="orange-link" data-i18n="tenthLinkTechnicalDrawing"></a>
+         <a href="https://drive.google.com/file/d/10MfmaJwXdXz165V7Wqp8GiSkO4aHzPrN/view" class="orange-link" data-i18n="tenthLinkTechnicalDrawing"></a>
          <a href="3D_MODEL_URL_10" class="orange-link" data-i18n="tenthLink3DModel"></a>
       </div>
     </section>
@@ -616,9 +631,9 @@
       <div class="video-container">
         <div class="model-column">
           <model-viewer
-            src="Model11.glb"
-            ios-src="Model11.usdz"
-            alt="3D-Modell: Model 11"
+            src="Befestigungsbügel.glb"
+            ios-src="Befestigungsbügel v1.usdz"
+            alt="Befestigungsbügel"
             ar
             ar-modes="scene-viewer quick-look webxr"
             camera-controls
@@ -639,7 +654,7 @@
         </div>
       </div>
       <div class="link-container">
-         <a href="TECHNICAL_DRAWING_URL_11" class="orange-link" data-i18n="eleventhLinkTechnicalDrawing"></a>
+         <a href="https://drive.google.com/file/d/10MfmaJwXdXz165V7Wqp8GiSkO4aHzPrN/view" class="orange-link" data-i18n="eleventhLinkTechnicalDrawing"></a>
          <a href="3D_MODEL_URL_11" class="orange-link" data-i18n="eleventhLink3DModel"></a>
       </div>
     </section>
@@ -651,9 +666,9 @@
       <div class="video-container">
         <div class="model-column">
           <model-viewer
-            src="Model12.glb"
-            ios-src="Model12.usdz"
-            alt="3D-Modell: Model 12"
+            src="Schrauben.glb"
+            ios-src="Schrauben.usdz"
+            alt="Schrauben"
             ar
             ar-modes="scene-viewer quick-look webxr"
             camera-controls
@@ -674,28 +689,17 @@
         </div>
       </div>
       <div class="link-container">
-         <a href="TECHNICAL_DRAWING_URL_12" class="orange-link" data-i18n="twelfthLinkTechnicalDrawing"></a>
+         <a href="https://drive.google.com/file/d/10MfmaJwXdXz165V7Wqp8GiSkO4aHzPrN/view" class="orange-link" data-i18n="twelfthLinkTechnicalDrawing"></a>
          <a href="3D_MODEL_URL_12" class="orange-link" data-i18n="twelfthLink3DModel"></a>
       </div>
     </section>
 
-    <!-- 13. Playlist-Bereich -->
+    <!-- 13. Playlist-Bereich – Kein 3D-Modell, Video in voller Breite -->
     <section class="playlist-section">
       <h2 data-i18n="thirteenthPlaylistTitle"></h2>
       <p data-i18n="thirteenthPlaylistDescription"></p>
       <div class="video-container">
-        <div class="model-column">
-          <model-viewer
-            src="Model13.glb"
-            ios-src="Model13.usdz"
-            alt="3D-Modell: Model 13"
-            ar
-            ar-modes="scene-viewer quick-look webxr"
-            camera-controls
-            auto-rotate
-            exposure="0.5">
-          </model-viewer>
-        </div>
+        <!-- Nur die Video-Spalte -->
         <div class="video-column">
           <iframe
             id="youtubePlayer13"
@@ -709,28 +713,17 @@
         </div>
       </div>
       <div class="link-container">
-         <a href="TECHNICAL_DRAWING_URL_13" class="orange-link" data-i18n="thirteenthLinkTechnicalDrawing"></a>
+         <a href="https://drive.google.com/file/d/10MfmaJwXdXz165V7Wqp8GiSkO4aHzPrN/view" class="orange-link" data-i18n="thirteenthLinkTechnicalDrawing"></a>
          <a href="3D_MODEL_URL_13" class="orange-link" data-i18n="thirteenthLink3DModel"></a>
       </div>
     </section>
 
-    <!-- 14. Playlist-Bereich -->
+    <!-- 14. Playlist-Bereich – Kein 3D-Modell, Video in voller Breite -->
     <section class="playlist-section">
       <h2 data-i18n="fourteenthPlaylistTitle"></h2>
       <p data-i18n="fourteenthPlaylistDescription"></p>
       <div class="video-container">
-        <div class="model-column">
-          <model-viewer
-            src="Model14.glb"
-            ios-src="Model14.usdz"
-            alt="3D-Modell: Model 14"
-            ar
-            ar-modes="scene-viewer quick-look webxr"
-            camera-controls
-            auto-rotate
-            exposure="0.5">
-          </model-viewer>
-        </div>
+        <!-- Nur die Video-Spalte -->
         <div class="video-column">
           <iframe
             id="youtubePlayer14"
@@ -744,28 +737,17 @@
         </div>
       </div>
       <div class="link-container">
-         <a href="TECHNICAL_DRAWING_URL_14" class="orange-link" data-i18n="fourteenthLinkTechnicalDrawing"></a>
+         <a href="https://drive.google.com/file/d/10MfmaJwXdXz165V7Wqp8GiSkO4aHzPrN/view" class="orange-link" data-i18n="fourteenthLinkTechnicalDrawing"></a>
          <a href="3D_MODEL_URL_14" class="orange-link" data-i18n="fourteenthLink3DModel"></a>
       </div>
     </section>
 
-    <!-- 15. Playlist-Bereich -->
+    <!-- 15. Playlist-Bereich – Kein 3D-Modell, Video in voller Breite -->
     <section class="playlist-section">
       <h2 data-i18n="fifteenthPlaylistTitle"></h2>
       <p data-i18n="fifteenthPlaylistDescription"></p>
       <div class="video-container">
-        <div class="model-column">
-          <model-viewer
-            src="Model15.glb"
-            ios-src="Model15.usdz"
-            alt="3D-Modell: Model 15"
-            ar
-            ar-modes="scene-viewer quick-look webxr"
-            camera-controls
-            auto-rotate
-            exposure="0.5">
-          </model-viewer>
-        </div>
+        <!-- Nur die Video-Spalte -->
         <div class="video-column">
           <iframe
             id="youtubePlayer15"
@@ -779,7 +761,7 @@
         </div>
       </div>
       <div class="link-container">
-         <a href="TECHNICAL_DRAWING_URL_15" class="orange-link" data-i18n="fifteenthLinkTechnicalDrawing"></a>
+         <a href="https://drive.google.com/file/d/10MfmaJwXdXz165V7Wqp8GiSkO4aHzPrN/view" class="orange-link" data-i18n="fifteenthLinkTechnicalDrawing"></a>
          <a href="3D_MODEL_URL_15" class="orange-link" data-i18n="fifteenthLink3DModel"></a>
       </div>
     </section>
