@@ -200,33 +200,37 @@
     }
     
     /* Media Query für mobile Geräte */
-    @media (max-width: 768px) {
-      /* Inhalte werden untereinander angeordnet */
-      .content-section,
-      .video-container {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      /* Spalten in der oberen Section auf volle Breite setzen */
-      .content-section .model-column,
-      .content-section .text-column {
-        flex: 0 0 100%;
-      }
-      /* Link-Container: geringerer horizontaler Abstand */
-      .link-container {
-        gap: 2rem;
-      }
-      /* headerDescription: Top-Versatz in Mobile verringern, damit keine Überlappung auftritt */
-      p[data-i18n="headerDescription"] {
-        top: 0;
-        margin-top: 1rem;
-      }
-      /* Für das 3D-Modell in der oberen Section: angepasste Höhe und volle Breite für mobile Darstellung */
-      .model-column model-viewer {
-        height: 300px;
-        width: 100%;
-      }
+@media (max-width: 768px) {
+    /* Container nach unten schieben, damit der fixe Header nicht überlappt */
+    .container {
+      padding-top: 100px; /* Anpassbar – so sollte der Druckluftmotor sichtbar sein */
     }
+    /* Inhalte werden untereinander angeordnet */
+    .content-section,
+    .video-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    /* Spalten in der oberen Section auf volle Breite setzen */
+    .content-section .model-column,
+    .content-section .text-column {
+      flex: 0 0 100%;
+    }
+    /* Link-Container: geringerer horizontaler Abstand */
+    .link-container {
+      gap: 2rem;
+    }
+    /* headerDescription: Top-Versatz in Mobile verringern */
+    p[data-i18n="headerDescription"] {
+      top: 0;
+      margin-top: 1rem;
+    }
+    /* Für das 3D-Modell in der oberen Section: angepasste Höhe und volle Breite für mobile Darstellung */
+    .model-column model-viewer {
+      height: 300px;
+      width: 100%;
+    }
+  }
   </style>
 
   <script>
